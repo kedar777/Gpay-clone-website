@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: white;
+            background-image: url('https://images.wallpapersden.com/image/download/line-light-background_aGVsZpSZmpqtpaSklGZpaWWtZ2prZWdlZ2ZuZmY.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <style>
+        .frame {
+            width: 380px;
+            height: 480px;
+            position: relative;
+            margin: 6% auto;
+            background: linear-gradient(to right, rgb(215, 215, 215), rgb(227, 227, 227));
+            padding: 5px;
+            overflow: hidden;
+
+        }
+
+        .button-box {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px rgb(134, 134, 134);
+            border-radius: 30px;
+
+        }
+
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+
+        #btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, rgb(0, 219, 244), rgb(0, 167, 238));
+            border-radius: 30px;
+            transition: .5s;
+
+        }
+
+        .social-icons {
+            margin: 30px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 12px;
+            box-shadow: 0 0 20px 0 black;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .input-group {
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+
+        .submit-btn {
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right, rgb(0, 219, 244), rgb(0, 167, 238));
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        #Login {
+            left: 50px;
+
+        }
+
+        #register {
+            left: 450px;
+
+        }
+    </style>
+
+    <div class="frame">
+        <center>
+            <div>
+                <img src="https://pay.google.com/about/static_kcs/images/logos/footer-logo.svg" style="padding:2% ;">
+
+            </div>
+        </center>
+
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="submit" class="toggle-btn" onclick="login()">Log In</button>
+            <button type="submit" class="toggle-btn" onclick="register()">Register</button>
+
+        </div>
+
+
+        <div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User id" name="userid" required>
+                <input type="password" class="input-field" placeholder="enter password" name="pswrd" required>
+                <button type="submit" class="submit-btn" onclick="check(this.form)" value="Login">Log In</button>
+            </form>
+
+            <!--this is Register from section-->
+
+
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User id" name="userid" required>
+                <input type="email" class="input-field" placeholder="Enter Email" name="userid" required>
+                <input type="password" class="input-field" placeholder="enter password" name="pswrd" required>
+                <input type="password" class="input-field" placeholder="Confrom password" name="pswrd" required>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+            <!--close of Register from -->
+        </div>
+        <script language="javascript">
+            function check(form) {
+
+                if (form.userid.value == "kedar" && form.pswrd.value == "kedar@123") {
+                    window.open('file:///K:/HTML%20programm/project/Google%20pay%201.html')
+
+                }
+                else {
+                    alert("Error Password or Username")
+                }
+            }
+
+
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register() {
+
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+
+            }
+
+            function login() {
+
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+
+            }
+
+        </script>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="social-icons">
+            <a href="https://www.google.com/account/about/">
+                <img src="https://cdn.iconscout.com/icon/free/png-64/google-160-189824.png"></a>
+            <img src="https://cdn.iconscout.com/icon/free/png-64/google-plus-27-789829.png">
+            <a href="https://twitter.com/i/flow/login">
+                <img src="https://cdn.iconscout.com/icon/free/png-64/twitter-2038532-1718517.png"></a>
+            <a href="https://support.google.com/pay/india/?hl=en&visit_id=637869825413482800-2601921407&rd=1#topic=">
+                <img src="https://cdn.iconscout.com/icon/premium/png-128-thumb/help-desk-2613951-2177949.png"></a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
